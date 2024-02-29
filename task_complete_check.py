@@ -11,7 +11,7 @@ def complete_social_task(task_id, project_id, token):
         # Post request, completing a task requires no payload according to documentation
         res = requests.post(
             f"https://api.social.com/open/v1/project/{project_id}/task/{task_id}/complete",
-            headers={"Authorization": f"Bearer {token}"}
+            headers={"Authorization": f"User {token}"}
         )
         try:
             res.raise_for_status()
