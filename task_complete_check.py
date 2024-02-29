@@ -1,7 +1,7 @@
 import requests
 import time
 
-def complete_ticktick_task(task_id, project_id, token):
+def complete_social_task(task_id, project_id, token):
     # List to collect error messages for logging
     err = []
     # Flag to record successful completion
@@ -10,7 +10,7 @@ def complete_ticktick_task(task_id, project_id, token):
     for i in range(5):
         # Post request, completing a task requires no payload according to documentation
         res = requests.post(
-            f"https://api.ticktick.com/open/v1/project/{project_id}/task/{task_id}/complete",
+            f"https://api.social.com/open/v1/project/{project_id}/task/{task_id}/complete",
             headers={"Authorization": f"Bearer {token}"}
         )
         try:
